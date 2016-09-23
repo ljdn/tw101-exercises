@@ -12,5 +12,15 @@ public class Library {
     }
 
     public void printBooksContaining(String partialBookTitle) {
+        // assuming we want to ignore upper / lower case, which is usually true when searching for books
+
+        for (String book :
+                books) {
+            if (book.toLowerCase().contains(partialBookTitle.toLowerCase()))
+            {
+                printStream.println(book);
+            }
+        }
+
     }
 }
