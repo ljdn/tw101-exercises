@@ -42,7 +42,10 @@ public class Node {
 
         if (this.left == null) {
             nodes.add(this.name);
-        } else { this.left.namesHelper(nodes); }
+        } else {
+            this.left.namesHelper(nodes);
+            nodes.add(this.name);
+        }
 
         if (this.right != null) {
             this.right.namesHelper(nodes);
